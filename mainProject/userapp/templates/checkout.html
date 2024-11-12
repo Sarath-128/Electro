@@ -1,0 +1,274 @@
+{% extends 'home.html' %}
+{% block store %}
+{% load static %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style>
+  .checkoutmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 87vh;
+    overflow: hidden;
+    max-height: auto;
+
+  }
+
+  .checkimage {
+    width: 90%;
+  }
+
+  .checkleft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rating:not(:checked)>input {
+    position: relative;
+    appearance: none;
+  }
+
+  .rating:not(:checked)>label {
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
+  }
+
+  .rating:not(:checked)>label:before {
+    content: '★';
+  }
+
+  .rating>input:checked+label:hover,
+  .rating>input:checked+label:hover~label,
+  .rating>input:checked~label:hover,
+  .rating>input:checked~label:hover~label,
+  .rating>label:hover~input:checked~label {
+    color: #e58e09;
+  }
+
+  .rating:not(:checked)>label:hover,
+  .rating:not(:checked)>label:hover~label {
+    color: #ff9e0b;
+  }
+
+  .rating>input:checked~label {
+    color: #ffa723;
+  }
+
+  .rating {
+    color: #ffa723;
+  }
+
+
+  .button1 {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    padding-bottom: 1px;
+    gap: 15px;
+    background-color: rgb(112, 2, 255);
+    outline: 3px rgb(112, 2, 255) solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+
+  .button1 .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+
+  .button1 svg path {
+    transition: 400ms;
+  }
+
+  .button1:hover {
+    background-color: transparent;
+  }
+
+  .button1:hover .text {
+    color: rgb(112, 2, 255);
+  }
+
+  .button1:hover svg path {
+    fill: rgb(112, 2, 255);
+  }
+
+  .bi-cart-check {
+    margin-top: -14px;
+    font-size: large;
+  }
+
+  .button2 {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    padding-bottom: 1px;
+    gap: 15px;
+    background-color: #181717;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+
+  .button2 .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+
+  .button2 .bi-bag-check {
+    transition: 400ms;
+  }
+
+  .button2:hover {
+    background-color: transparent;
+  }
+
+  .button2:hover .text {
+    color: #181717;
+  }
+
+  .button2:hover .bi-bag-check {
+    fill: #181717;
+  }
+
+  .bi-bag-check {
+    margin-top: -14px;
+    font-size: large;
+  }
+  .foot{
+   margin: 22px;
+  }
+
+  @media (min-width: 1200px) {
+
+  }
+
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+
+  }
+
+
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    .foot{
+      margin: 13.5px;
+    }
+  }
+
+
+  @media (min-width: 576px) and (max-width: 767px) {
+
+    .foot{
+      margin: 13.5px;
+    }
+  }
+
+
+  @media (max-width: 575px) {
+    .twobtn{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .foot{
+      margin: 13.5px;
+    }
+  }
+</style>
+
+
+<div class="checkoutmain  ">
+
+  <div class="major row row-cols-1 row-cols-md-2 g-4" style="overflow: hidden; width: 70%;">
+    <div class="checkleft col " style="margin-top: 42px;">
+      <img src="{{product.image.url}}" style="border-radius: 12px;min-width: 250px;" class="checkimage" alt="">
+    </div>
+    <div class="checkright col">
+      <p class="mb-0" style="color: rgb(255, 192, 1); font-family: sans-serif; font-size: 16px; margin-top: 12px;">New
+        Arrivals</p>
+      <h2 style=" font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; "> <span style="color: rgb(112, 2, 255);">Buy</span>
+        {{product.name}}</h2>
+      </p>
+      <div class="rating" style="margin-top: -21px;">
+        <input value="5" name="rate" id="star5" type="radio" disabled checked>
+        <label title="text" for="star5"></label>
+        <input value="4" name="rate" id="star4" type="radio" disabled>
+        <label title="text" for="star4"></label>
+        <input value="3" name="rate" id="star3" type="radio" disabled>
+        <label title="text" for="star3"></label>
+        <input value="2" name="rate" id="star2" type="radio" disabled>
+        <label title="text" for="star2"></label>
+        <input value="1" name="rate" id="star1" type="radio" disabled>
+        <label title="text" for="star1"></label>
+      </div>
+      <hr style="color: transparent;">
+      <div style="display: flex; flex-direction: row;">
+        <div><i class="bi bi-truck fs-5"></i></div>
+        <div class=" w-100 " style="margin-left: 10px; padding-top: 5px;">
+          <p class="mb-0"> Order by 4:00 pm. Delivers to <a href="#" style="text-decoration: none;"> 560999</a></p>
+          <p>Tomorrow - Free</p>
+        </div>
+
+      </div>
+      <div style="display: flex; flex-direction: row; margin-top: -12px; ">
+        <div><i class="bi bi-bag-check-fill fs-5"></i></div>
+        <div class=" w-100 " style="margin-left: 10px; padding-top: 5px;">
+          <p class="mb-0">Pickup:</p>
+          <a href="#" style="text-decoration: none;">Check availability</a>
+        </div>
+
+      </div>
+      <hr style="color: transparent;">
+
+      <h2>MRP ₹{{product.price}}.00
+        (Incl. of all taxes)</h2>
+      
+
+      {% if product.quantity == 0 %}
+      
+<hr style="color: white;">
+        <h3 style="color: red;">Oops..!! Out of stock</h3>
+
+        {% else %}
+        <p>Only {{product.quantity}} items are available!</p>
+      <div class="twobtn" style="display: flex; flex-direction: row; gap: 10px;">
+        
+        <a href="{% url 'addcart' product.id %}" class="button1 btn">
+          <p class="text">Buy Now</p>
+        </a>
+     
+        <a class="button2 button" href="{% url 'addcart' product.id %}" style="text-decoration: none;">
+
+          <p class="text">Add to cart</p>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+    <div class="foot text-center" style="width: 90%; ">
+      <hr>
+      <p>Get help buying. <a href="#" style="text-decoration: none;">Chat now<i class="bi bi-arrow-up-right"></i></a> or
+        call 000800 040 1966.</p>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

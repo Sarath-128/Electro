@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block content %}
+
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+    </tr>
+    {% if content %}
+    {% for item in content %}
+        <tr>
+            <td><img src={{item.image.url}} style="width: 40px; height: 40px; border-radius: 50%;" >    {{item.name}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.price}}</td>
+            <td>
+                <a href="{% url 'update' item.id %}"><u>Edit</u></a>
+                <a href="#"  data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{ item.id }}"><u>Delete</u></a>
+            </td>
+        </tr>
+    {% endfor %}
+    {% endif %}
+
+
+</table>
+
+
+
+
+{% endblock %}
