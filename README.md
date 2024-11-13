@@ -1,5 +1,5 @@
 ![Django](https://img.shields.io/badge/Python-blue)
-![Uiverse](https://img.shields.io/badge/JavaScript-yellow)
+![Uiverse](https://img.shields.io/badge/Uiverse-yellow)
 ![Stripe](https://img.shields.io/badge/Stripe-red)
 
 
