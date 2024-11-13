@@ -1,5 +1,5 @@
-![Python](https://img.shields.io/badge/language-Python-blue)
-![JavaScript](https://img.shields.io/badge/language-JavaScript-yellow)
+![Python](https://img.shields.io/badge/Python-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
 
 
 # Electro - E-Commerce Website
