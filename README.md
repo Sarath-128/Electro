@@ -1,4 +1,4 @@
-![Django](https://img.shields.io/badge/Python-blue)
+![Django](https://img.shields.io/badge/Django-blue)
 ![Uiverse](https://img.shields.io/badge/Uiverse-yellow)
 ![Stripe](https://img.shields.io/badge/Stripe-red)
 
