@@ -60,4 +60,4 @@ Before you start, make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/electro.git
+   [git clone https://github.com/yourusername/electro.git](https://github.com/Sarath-128/Electro.git)
