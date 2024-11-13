@@ -25,7 +25,7 @@
 ![Screenshot 2024-11-13 183500](https://github.com/user-attachments/assets/c0b4840b-5651-4be6-bf63-0e85c233555c)
 
 - **Secure Payments**: Integrated with Stripe for reliable and secure payment processing.  
-         **Note**: Use debit card number - 4242 4242 4242 4242. And other details are default
+         **Note**: Use debit card number - 4242 4242 4242 4242. And add any CVV and Expire date for successful demo payments
   
 ![Screenshot 2024-11-13 183528](https://github.com/user-attachments/assets/2c922e61-6ca2-4393-976a-cff10ebdd87c)
 
