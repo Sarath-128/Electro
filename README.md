@@ -21,7 +21,11 @@
 ![Screenshot 2024-11-13 183304](https://github.com/user-attachments/assets/9b57af8a-a02b-4aa3-ae28-de9dfac5ca1b)
 
 - **Shopping Cart**: Users can add, update, and remove items from their cart.
-  
+
+![Screenshot 2024-11-13 183513](https://github.com/user-attachments/assets/98897c85-f152-40ab-911a-48bdf3b73e49)
+
+- **CheckOut Section**: Users can add items to their cart and here available the details of the product.
+
 ![Screenshot 2024-11-13 183500](https://github.com/user-attachments/assets/c0b4840b-5651-4be6-bf63-0e85c233555c)
 
 - **Secure Payments**: Integrated with Stripe for reliable and secure payment processing.  
