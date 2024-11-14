@@ -56,8 +56,4 @@ Before you start, make sure you have the following installed:
 - Stripe account (for payment gateway integration)
 - Uiverse account (for UI components)
 
-### Backend Setup
 
-1. Clone the repository:
-   ```bash
-   https://github.com/Sarath-128/Electro.git
